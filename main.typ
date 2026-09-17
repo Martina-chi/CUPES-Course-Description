@@ -259,6 +259,6 @@
   ],
 )
 
-// Additional officially recognized methodology/statistics courses can be added
-// after they appear on the student's transcript. ECTS equivalents are deliberately
-// left blank until an official or institutionally acceptable conversion basis is available.
+// The broader course library is maintained separately so that school-specific
+// application versions can later select only the courses relevant to each requirement.
+#include "additional_courses.typ"
