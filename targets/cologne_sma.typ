@@ -1,0 +1,216 @@
+#import "../template.typ": template, course
+
+#show: template.with(
+  university: "Capital University of Physical Education and Sports",
+  major: "Bachelor of Education in Social Sports Guidance and Management",
+  school: "",
+  name: "Yutong Chi",
+  id: "23014201017",
+  cover: (
+    logo_path: "../IMG_1040.png",
+    logo_width: 100%,
+    logo_with_university_name: true,
+  ),
+)
+
+= Research Methods and Methodological Competence
+
+#course(
+  name: [Research Methods in Sport Science],
+  id: [XS043007],
+  semester: [2025–2026, Semester 1],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Research design in sport science
+    - Literature research methods
+    - Observation methods
+    - Survey research methods
+    - Experimental research methods
+    - Organization and analysis of research data
+    - Academic research and thesis writing
+  ],
+  description: [This course introduces fundamental research methods used in sport science. It develops students' understanding of research design and the procedures involved in conducting scientific research. The course covers literature research, observation, survey research and experimental methods, together with the organization and analysis of research data. It also introduces the principles and procedures of academic research and thesis writing.],
+)
+
+= Sport Management, Business and Organizations
+
+#course(
+  name: [Sport Management],
+  id: [XS042009],
+  semester: [2024–2025, Semester 1],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Foundations of sport management
+    - Sport management methods and systems
+    - Management of school sport, competitive sport and sport for all
+    - Sport event risk management
+    - Sport industry management
+  ],
+  description: [This course introduces the fundamental principles, methods and functions of sport management. Major areas include sport management systems, school sport, competitive sport, sport for all, sport event risk management and sport industry management.],
+)
+
+#course(
+  name: [Introduction to Sport Industry],
+  id: [XS042007],
+  semester: [2023–2024, Semester 2],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Fundamental theories of the sport industry
+    - Development in China and internationally
+    - Sport markets and consumption
+    - Professional sport
+    - Intangible assets in sport
+    - Sport venue management and operation
+    - Olympic marketing
+  ],
+  description: [This course introduces the theories and operating principles of the sport industry, including sport markets and consumption, professional sport, intangible sport assets, venue operation and Olympic marketing.],
+)
+
+#course(
+  name: [Construction and Management of Social Organizations in Sports],
+  id: [XS042006],
+  semester: [2025–2026, Semester 1],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Concepts, types, characteristics and functions of sport social organizations
+    - Historical development
+    - Internal governance and government support
+    - Construction and management of sport organizations
+    - Sport nonprofit organizations abroad
+  ],
+  description: [This course examines sport social organizations, their historical development, governance, government support, organizational construction and management, and sport nonprofit organizations in other countries.],
+)
+
+#course(
+  name: [Operation and Management of Fitness Clubs],
+  id: [XS042010],
+  semester: [2025–2026, Semester 1],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Principles and methods of fitness club operation
+    - Operating models in China and abroad
+    - Management theories
+    - Current operational issues
+    - Development trends
+  ],
+  description: [This course introduces the principles, methods and models of fitness club operation and management and examines management theory, operational issues and development trends.],
+)
+
+#course(
+  name: [Introduction to Sport Tourism],
+  id: [XS042011],
+  semester: [2024–2025, Semester 1],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Sport tourism as a field of study
+    - Tourist subjects, objects and tourism media
+    - Historical evolution
+    - Contemporary development
+    - Fundamental patterns of sport tourism development
+  ],
+  description: [This course provides an overview of sport tourism, its historical evolution and contemporary development, and the relationships among tourists, tourism resources and tourism media.],
+)
+
+#course(
+  name: [Innovation and Entrepreneurship Fundamentals],
+  id: [XS041009],
+  semester: [2024–2025, Semester 1 (credit recognition)],
+  credit: [4],
+  ects: [6],
+  content: [
+    - Innovation and entrepreneurial awareness
+    - Entrepreneurial teams and opportunities
+    - Business models
+    - Business-plan preparation
+  ],
+  description: [This course introduces innovation and entrepreneurship, including entrepreneurial teams and opportunities, business models and business-plan preparation. The credit value follows the student's recognized academic record.],
+)
+
+= Sport, Society and Community
+
+#course(
+  name: [Sport Sociology],
+  id: [XS042008],
+  semester: [2023–2024, Semester 2],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Historical development of sport sociology
+    - Sport as a social and cultural phenomenon
+    - Sport and society
+    - Social groups and organizations in sport
+    - Sport associations and community sport
+    - Participation among different population groups
+    - Social issues in sport
+  ],
+  description: [This course examines sport as a social and cultural phenomenon and applies sociological concepts to sport organizations, community sport, participation and social issues.],
+)
+
+#course(
+  name: [Community Sports],
+  id: [XS042005],
+  semester: [2024–2025, Semester 1 (credit recognition)],
+  credit: [2],
+  ects: [3],
+  hours: [36],
+  content: [
+    - Concepts and theories of communities and community sport
+    - Historical development
+    - Community sport work and practice
+    - Development in China and abroad
+    - Community sport management and guidance
+  ],
+  description: [This course introduces the theoretical foundations and development of community sport and develops competencies in community sport management and guidance.],
+)
+
+= Sport Science Foundations
+
+#course(
+  name: [Sport Anatomy],
+  id: [XS042001],
+  semester: [2023–2024, Semester 2],
+  credit: [4],
+  ects: [6],
+  hours: [64],
+  content: [
+    - Morphological structure and functions of human organ systems
+    - Developmental characteristics
+    - Anatomical principles of human movement
+    - Effects of exercise on human morphology and structure
+  ],
+  description: [This course introduces the morphology, structure and functions of human organ systems and anatomical principles underlying human movement and exercise.],
+)
+
+#course(
+  name: [Sport Physiology],
+  id: [XS042002],
+  semester: [2024–2025, Semester 1],
+  credit: [4],
+  ects: [6],
+  hours: [72],
+  content: [
+    - Human exercise capacity
+    - Physiological responses and adaptations to exercise
+    - Mechanisms through which exercise influences bodily functions
+    - Fitness exercise principles
+    - Basic experimental skills
+  ],
+  description: [This course examines human exercise capacity and physiological responses and adaptations to physical activity through theory, experiment and practice.],
+)
+
+// Targeted preview for German Sport University Cologne M.Sc. Sport Management (SMA).
+// Course selection emphasizes sport-science orientation, management/business content and methodological competence.
+// It does not claim that the selected courses alone satisfy GSU's formal admission thresholds.
