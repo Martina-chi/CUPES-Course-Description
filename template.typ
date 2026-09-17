@@ -17,7 +17,6 @@
         v(1fr)
       }
       #text(weight: "bold", size: 30pt)[#university]
-
       #text(weight: "bold", size: 30pt, "Course Description")
       #v(2fr)
       #text(weight: "semibold", size: 16pt)[#major]
@@ -25,114 +24,41 @@
       #text(size: 16pt)[Name: #name]
       #parbreak()
       #text(size: 16pt)[Student No.: #id]
-      #parbreak()
-      // #text(weight: "semibold", size: 18pt)[#school]
     ]
     #v(3fr)
     #set text(weight: "medium", size: 14pt)
   ]
-  // Credit System Explanation Page
-  page(
-    footer: [#h(1fr)#datetime.today().display()]
-  )[
-    #align(center)[
-      #text(weight: "bold", size: 18pt)[Credit System Explanation]
-    ]
-    
+
+  // CUPES credit-system information. No ECTS conversion is asserted because
+  // the official curriculum supplied for this document does not establish one.
+  page(footer: [#h(1fr)#datetime.today().display()])[
+    #align(center)[#text(weight: "bold", size: 18pt)[Credit and Workload Information]]
     #v(1em)
-    
     #set par(justify: true, leading: 0.65em)
     #set text(size: 11pt)
-    
-    This document describes courses taken at *Tianjin University*. The credit system at Tianjin University differs from the European Credit Transfer and Accumulation System (ECTS). The following conversion and workload information applies based on the official transcript regulations:
-    
+
+    This document describes selected courses from the *Social Sports Guidance and Management* bachelor's curriculum at *Capital University of Physical Education and Sports (CUPES)*. Course credits and contact hours are reported in the original CUPES system as stated in the official curriculum and the student's academic records.
+
     #v(1em)
+    - Standard programme duration: *4 years*.
+    - Minimum graduation requirement: *171 CUPES credits*.
+    - Classroom coursework in the curriculum: *147 credits* and *2,998 teaching hours*.
+    - Centralized practical components: *24 credits*.
+    - Degree awarded upon fulfilment of graduation and degree requirements: *Bachelor of Education*.
 
-    - Our minimum curriculum credits for graduation (including courses and practicum)：*160 Credits*.
-    - In Europe, 60 ECTS credits are the equivalent of a full year of study or work. The number of minimum ECTS for 4-year bachelor degree is *240*. Therefore, the conversion ratio between Original Credit and ECTS is:
-    #align(center)[
-      *1 Original Credit corresponding to 1.5 ECTS*
-    ]
     #v(1em)
-    
-    #table(
-      columns: (auto, 1fr),
-      stroke: 0.5pt,
-      inset: 10pt,
-      [*Our Credit*], [1 credit point],
-      [*ECTS Equivalent*], [≈ 1.5 ECTS],
-      [*Classroom Hours*], [16 Schooling Hours (for courses, each hour = 45 minutes)],
-      [*Practice Hours*], [1 Week (for centralized practice)],
-    )
-    
-    #v(1em)
-    
-    The credit system is defined as follows:
-
-    - *Academic Courses*: One credit is awarded for every 16 schooling hours of instruction.
-
-    - *Centralized Practice*: One credit is awarded per week of full-time practical training or internship.
-
+    No automatic conversion from CUPES credits to ECTS is stated in this document. Where an admissions institution requires an ECTS-equivalent evaluation, the original credits, teaching hours, course content and official academic records should be assessed according to that institution's rules.
   ]
 
-  // Page settings
   set page(
-    header: [
-      Course Description - #name
-      #h(1fr)
-      #university
-    ],
-    footer: context [
-      #counter(page).display("1 / 1", both: true)
-      #h(1fr)
-      #datetime.today().display()
-    ],
-    // background: image(
-    //   watermark.img_path,
-    //   width: watermark.img_width,
-    // )
-    // 
-    // 这里注释了水印背景设置
+    header: [Course Description - #name #h(1fr) #university],
+    footer: context [#counter(page).display("1 / 1", both: true) #h(1fr) #datetime.today().display()],
   )
 
-// Table of contents
   page(footer: [#h(1fr)#datetime.today().display()])[
-    #show outline.entry.where(level: 2): it => {
-      let loc = it.element.location()
-      
-      context {
-        let m = query(selector(<course_ects>).after(loc))
-        
-        if m != () and m.first().location().page() == loc.page() {
-          let ects_val = m.first().value
-          
-          // 使用 it.indented 处理缩进，并将标题、学分、虚线、页码放在同一个块中
-          it.indented(
-            it.prefix(), // 自动获取 1.1, 2.1 等编号
-            [
-              #link(loc)[
-              #it.element.body
-              #h(0.4em)
-              #text(style: "italic", fill: gray.darken(20%), weight: "regular")[(#ects_val ECTS)]
-            ]
-            #box(width: 1fr, it.fill)
-            // 页码通常也建议包裹在 link 中，方便点击
-            #link(loc)[#it.page()]
-            ]
-          )
-        } else {
-          it
-        }
-      }
-    }
-    
-    #outline(
-      title: "Table of Contents",
-      indent: 2em,
-    )
+    #outline(title: "Table of Contents", indent: 2em)
   ]
-  
-  // Main body
+
   counter(page).update(1)
   set par(justify: true)
   set heading(numbering: "1.1.")
@@ -153,19 +79,15 @@
   description: none,
   assessment: none,
 ) = {
-  
-  heading(depth: 2)[
-    #name
-    #metadata(ects) <course_ects>
-  ]
+  heading(depth: 2)[#name]
   let cells = (
     ([*Course Title*], name),
     ([*Course No.*], id),
     ([*Semester*], semester),
-    ([*Credit*], credit),
+    ([*CUPES Credit*], credit),
     ([*ECTS Equivalent*], ects),
     ([*Course Hours*], hours),
-    ([*My Grade*], grade),
+    ([*Grade*], grade),
     ([*Preparatory Course(s)*], preparatory),
     ([*Prerequisite(s)*], prerequisite),
     ([*Content*], content),
@@ -179,8 +101,5 @@
       table_args.push(row.at(1))
     }
   }
-  table(
-    columns: (auto, 1fr),
-    ..table_args,
-  )
+  table(columns: (auto, 1fr), ..table_args)
 }
