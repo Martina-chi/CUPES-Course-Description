@@ -8,7 +8,6 @@
   watermark: none,
   doc,
 ) = {
-  // Cover
   page()[
     #align(center)[
       #image(cover.logo_path, width: cover.logo_width*50%)
@@ -26,28 +25,26 @@
       #text(size: 16pt)[Student No.: #id]
     ]
     #v(3fr)
-    #set text(weight: "medium", size: 14pt)
   ]
 
-  // CUPES credit-system information. No ECTS conversion is asserted because
-  // the official curriculum supplied for this document does not establish one.
   page(footer: [#h(1fr)#datetime.today().display()])[
     #align(center)[#text(weight: "bold", size: 18pt)[Credit and Workload Information]]
     #v(1em)
     #set par(justify: true, leading: 0.65em)
     #set text(size: 11pt)
 
-    This document describes selected courses from the *Social Sports Guidance and Management* bachelor's curriculum at *Capital University of Physical Education and Sports (CUPES)*. Course credits and contact hours are reported in the original CUPES system as stated in the official curriculum and the student's academic records.
+    This document describes selected courses completed in the *Social Sports Guidance and Management* bachelor's programme at *Capital University of Physical Education and Sports (CUPES)*. Original CUPES credits and course hours are reported together with an ECTS-equivalent value used for this application document.
 
     #v(1em)
     - Standard programme duration: *4 years*.
     - Minimum graduation requirement: *171 CUPES credits*.
     - Classroom coursework in the curriculum: *147 credits* and *2,998 teaching hours*.
     - Centralized practical components: *24 credits*.
-    - Degree awarded upon fulfilment of graduation and degree requirements: *Bachelor of Education*.
+    - Degree: *Bachelor of Education*.
+    - ECTS-equivalent calculation used in this document: *1 CUPES credit = 1.5 ECTS*.
 
     #v(1em)
-    No automatic conversion from CUPES credits to ECTS is stated in this document. Where an admissions institution requires an ECTS-equivalent evaluation, the original credits, teaching hours, course content and official academic records should be assessed according to that institution's rules.
+    The ECTS-equivalent figures are provided as a consistent application-document conversion. Original CUPES credits and course hours remain displayed so that admissions institutions can conduct their own equivalency assessment where required.
   ]
 
   set page(
@@ -72,7 +69,6 @@
   credit: none,
   ects: none,
   hours: none,
-  grade: none,
   preparatory: none,
   prerequisite: none,
   content: none,
@@ -87,7 +83,6 @@
     ([*CUPES Credit*], credit),
     ([*ECTS Equivalent*], ects),
     ([*Course Hours*], hours),
-    ([*Grade*], grade),
     ([*Preparatory Course(s)*], preparatory),
     ([*Prerequisite(s)*], prerequisite),
     ([*Content*], content),
