@@ -7,7 +7,7 @@
   name: "Yutong Chi",
   id: "23014201017",
   cover: (
-    logo_path: "tju_logo.png",
+    logo_path: "IMG_1040.png",
     logo_width: 100%,
     logo_with_university_name: true,
   ),
